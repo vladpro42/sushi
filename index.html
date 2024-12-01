@@ -6,14 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sushi</title>
     <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <img src="./assets/images/home/logo.svg" width="214" height="48" alt="logo of company">
+                    <select name="" id="">
+                        <option value=""></option>
+                    </select>
+                </a>
+                <div class="header__center">
+                    <a class="header__city" href="#">
+                        <p class="header__flag">
+                            <span></span>
+                            <span></span>
+                        </p>
+                        <span class="header__link">Киев</span>
+                    </a>
+                    <button class="header__lang">RU</button>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item"><a href="#" class="header__link active">Главная</a></li>
+                            <li class="header__item"><a href="#" class="header__link">Доставка</a></li>
+                            <li class="header__item"><a href="#" class="header__link">О нас</a></li>
+                            <li class="header__item"><a href="#" class="header__link">Новости</a></li>
+                        </ul>
+                    </nav>
+                    <a class="header__phone" href="tel:+380976993438">
+                        <img src="./assets/images/home/site/phone.svg" alt="phone icon">
+                        <span>+38 097 699 34 38</span>
+                    </a>
+                </div>
+                <div class="header__actions">
+
+                    <button class="header__action-btn header__notification">
+                        <img src="./assets/images/home/site/bell.svg" alt="notification">
+                        <span class="header__notification-count">2</span>
+                    </button>
+                    <a href="#" class="header__action-btn header__favorite">
+                        <img src="./assets/images/home/site/favorite.svg" alt="favorite">
+                    </a>
+                    <a href="#" class="header__action-btn header__profile">
+                        <img src="./assets/images/home/site/profile.svg" alt="user account">
+                    </a>
+                    <a class="header__action-btn header__cart" href="#">
+                        <span>Корзина</span>
+                        <img src="./assets/images/home/site/cart.svg" alt="cart">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
     <h1>home</h1>
 
-   
-    <script  src="./global.js"></script>
+
+    <script src="./global.js"></script>
 </body>
 
 </html>
