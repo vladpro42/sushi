@@ -25,19 +25,52 @@
 }
 
 .header__city {
-    padding-left: 70px;
+    margin-left: 70px;
+    padding: 22px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.header__flag {}
+.header__link-city:hover.header__link:not(.active):hover {
+    background-color: transparent;
+    color: var(--orange);
+}
+
+.header__flag {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__flag span {
+    width: 20px;
+    height: 8px;
+    border-radius: 2px;
+}
+
+.header__flag span:first-child {
+    background-color: #155DB9;
+}
+
+.header__flag span:last-child {
+    background-color: #FCD330;
+}
 
 .header__lang {
     border: none;
     cursor: pointer;
+    font-weight: 500;
     background-color: transparent;
+    padding: 22px 18px 22px 12px;
+    transition: color 300ms ease;
+}
+
+.header__lang:hover {
+    color: var(--orange);
 }
 
 .header__nav {
-    margin-right: 6px;
+    margin-left: 6px;
 }
 
 .header__list {
@@ -47,13 +80,15 @@
 
 }
 
-.header__item {
-}
+.header__item {}
 
 .header__link.active {
     background-color: rgba(255, 102, 51, 0.15);
     color: var(--orange);
-   
+}
+
+.header__link.active:hover {
+    background-color: rgba(161, 66, 34, 0.15);
 }
 
 .header__link:not(.active):hover {
@@ -117,7 +152,25 @@
 
 .header__action-btn:hover {
     background-color: var(--dividing);
-    color: var(--orange); /* Заменить на svg */
+    color: var(--orange);
+}
+
+.header__action-btn:hover svg path {
+    fill: var(--orange);
+}
+
+.header__action-btn.active {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+.header__action-btn.active svg path {
+    fill: #fff;
+}
+
+.header__action-btn.active:hover {
+    background-color: var(--orange-hover);
+    border-color: var(--orange-hover);
 }
 
 .header__favorite {}
