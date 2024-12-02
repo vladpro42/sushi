@@ -186,3 +186,131 @@
     color: var(--gray);
     font-weight: 500;
 }
+
+/* categories Nav */
+
+.categories-nav {
+    margin-top: 16px;
+}
+
+.categories-nav__container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.categories-nav__list {
+    padding: 6px 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.categories-nav__item {
+    padding: 6px 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.categories-nav__item svg {
+    flex-grow: 1;
+}
+
+.categories-nav__link {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.categories-nav__item:hover .categories-nav__item-svg--hover {
+    fill: var(--orange);
+}
+
+.categories-nav__item.active {
+    color: var(--orange);
+}
+
+.categories-nav__item.active .categories-nav__item-svg--hover {
+    fill: var(--orange);
+}
+
+.disabled {}
+
+
+/* TOP  */
+
+
+
+.top {
+    margin-top: 48px;
+    margin-bottom: 124px;
+}
+
+.top__inner {
+    display: flex;
+}
+
+.top__left {
+    color: var(--text-dark);
+    padding: 118px 47px 118px 94px;
+    max-width: 565px;
+}
+
+.top__title {
+    font-size: 64px;
+    line-height: 82px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.title {}
+
+.top__subtitle {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #686870;
+    display: block;
+}
+
+.top__btn {}
+
+.top__right {}
+
+.top__swiper {
+    --swiper-pagination-color: var(--orange);
+    --swiper-pagination-bullet-inactive-color: #D2D2D7;
+    --swiper-pagination-bullet-horizontal-gap: 7px;
+    width: 870px;
+    height: 686px;
+}
+
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {
+    text-align: left;
+}
+
+.top__swiper .swiper-button-prev {
+    display: none;
+}
+
+.top__swiper .swiper-button-next {
+    display: none;
+}
+
+.top__swiper .swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: 35px;
+}
+
+.swiper-scrollbar {}
