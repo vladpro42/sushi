@@ -33,6 +33,8 @@ body {
     --orange-hover: #ac4725;
     --dividing: #F5F5F5;
     --gray: #686870;
+    --accent: #00CC2D;
+    --accent-hover: #006617;
 }
 
 h1,
@@ -67,6 +69,21 @@ button {
     background-color: transparent
 }
 
+.btn {
+    background-color: var(--accent);
+    padding: 15px 48px;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    gap: 8px;
+    border-radius: 12px;
+    width: 311px;
+    transition: background-color 300ms linear;
+}
 
+.btn:hover,
+.btn:active {
+    background-color: var(--accent-hover);
+}
 
-.container {}
+.btn-site {}
