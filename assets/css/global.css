@@ -30,6 +30,7 @@ body {
 :root {
     --text-dark: #1D1D1F;
     --orange: #FF6633;
+    --orange-hover: #ac4725;
     --dividing: #F5F5F5;
     --gray: #686870;
 }
