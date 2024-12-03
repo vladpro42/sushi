@@ -186,3 +186,157 @@
     color: var(--gray);
     font-weight: 500;
 }
+
+
+
+
+/* Footer */    
+
+.footer{
+    
+    padding: 64px 0 118px 0px;
+    background-color: #fff;
+}
+
+
+.footer__inner{
+    display: grid;
+    grid-template-columns: 306px 101px 168px 137px 174px 306px;
+    column-gap: 88px;
+    margin-bottom: 34px;
+}
+
+
+.footer__contacts{
+    width: 246px;
+}
+.footer__logo{
+    display: inline-block;
+    margin-bottom: 24px;
+    object-fit: cover;
+}
+
+.footer__logo img{
+    object-fit: inherit;
+    object-position: right;
+}
+
+.footer__links{
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer__contacts-text{
+    font-size: 14px;
+    color: var(--footer-gray);
+}
+
+.footer__nav{
+    width: 101px;
+}
+
+.footer__list-text{
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.footer__list-item{
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.footer__list-item:hover{
+    color: var(--orange)
+}
+
+.footer__list-item:last-child{
+    margin-bottom: 0;
+}
+
+.footer__order{
+    width: 168px;
+}
+
+.footer__work-text{
+    color: var(--footer-gray);
+}
+
+.footer__social-icon{
+    width: 64px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+    
+
+.footer__social-link{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    width: 174px;
+    padding: 10px 12px;
+    background-color: var(--dividing);
+}
+
+.footer__social-link img{
+
+}
+
+.footer__social-link span{
+    color: #039BE5;
+    font-weight: 500;
+}
+
+.footer__descr{
+
+
+}
+
+.footer__descr-title{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.footer__descr-text{
+    color: var(--footer-gray);
+    margin-bottom: 18px;
+}
+
+.footer__descr-link{
+    display: inline-block;
+    padding: 16px 42px;
+    border-radius: 15px;
+    background-color: var(--dividing);
+}
+
+.footer__descr-link{
+    color: #00CC2D;
+}
+
+.footer__info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__info-link{
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer__info-icons{
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__info-img{
+    
+}
