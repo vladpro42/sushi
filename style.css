@@ -217,6 +217,10 @@
     align-items: center;
 }
 
+.categories-nav__item.disabled .categories-nav__link {
+    color: #9E9E9E;
+}
+
 .categories-nav__item svg {
     flex-grow: 1;
 }
@@ -242,8 +246,6 @@
 
 
 /* TOP  */
-
-
 
 .top {
     margin-top: 48px;
@@ -314,3 +316,146 @@
 }
 
 .swiper-scrollbar {}
+
+
+/* foood */
+
+.food {
+    margin-bottom: 124px;
+}
+
+.food__inner {}
+
+.food__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.food__title {}
+
+.food__btn {}
+
+.food__list {
+    --count: 4;
+    --gap: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(var(--count), 1fr);
+    gap: var(--gap);
+
+}
+
+.food__item {
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    height: 596px;
+}
+
+.food__item-header {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.food__item-tabs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: stretch;
+    gap: 6px;
+}
+
+.food__item-tab {
+    padding: 6px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 8px;
+}
+
+.tab-hit {
+    color: var(--orange);
+    background-color: var(--orange-bg);
+}
+
+.tab-new {
+    color: var(--accent);
+    background-color: var(--accent-bg);
+}
+
+.food__item__header-img {}
+
+.food__item__header-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.food__item-filters {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.food__item-filter {}
+
+.food__item-body {
+    flex-grow: 1;
+    margin-bottom: 12px;
+}
+
+.food__item-title {
+    font-size: 27px;
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+
+.food__item-weight {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    gap: 4px;
+    color: var(--orange);
+    margin-bottom: 8px;
+}
+
+.food__item-characteristics {
+    display: inline-flex;
+    flex-wrap: wrap;
+    color: var(--gray);
+}
+
+.food__item-characteristic {}
+
+.food__item-footer {
+    display: flex;
+    align-items: center;
+}
+
+.food__item-price {
+    font-weight: 700;
+    color: var(--gray);
+    font-size: 24px;
+    flex-grow: 1;
+}
+
+.food__item-price strong {
+    font-size: 36px;
+    color: var(--text-dark);
+}
+
+.food__item-favorite {
+    margin-right: 12px;
+}
+
+.food__item-cart {}
