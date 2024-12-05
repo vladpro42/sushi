@@ -816,7 +816,7 @@
 .delivery__map {
     width: 100%;
     background-size: cover;
-    background-image: url(../assets/images/home/site/map.png);
+    background-image: url(./assets/images/home/site/map.png);
     height: 671px;
 }
 
