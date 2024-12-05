@@ -604,18 +604,19 @@
 }
 
 .delivery {
-    margin-bottom: 96px;
-    
+    margin-bottom: 226px;
+
 }
-.delivery__inner {
-    
-}
+
+.delivery__inner {}
+
 .delivery__title {
     text-align: center;
     max-width: 1246px;
     margin: 0 auto;
     margin-bottom: 48px;
 }
+
 .delivery__info {
     justify-content: center;
     margin-bottom: 16px;
@@ -623,29 +624,34 @@
     align-items: center;
     gap: 24px;
 }
+
 .delivery__info-item {
     display: flex;
     align-items: center;
     gap: 12px;
 }
+
 .delivery__info-circle {
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    border: 1px solid ;
-    
+    border: 1px solid;
+
 }
+
 .green {
     border-color: #7CB342;
-    background-color: rgba(124,179,66,0.24);
+    background-color: rgba(124, 179, 66, 0.24);
 }
+
 .orange {
     border-color: #FBC02D;
-    background-color: rgba(251,192,45, 0.24);
+    background-color: rgba(251, 192, 45, 0.24);
 }
+
 .red {
     border-color: #FF5252;
-    background-color: rgba(255,82,82, 0.24);
+    background-color: rgba(255, 82, 82, 0.24);
 }
 
 .delivery__info-text {
@@ -659,4 +665,86 @@
     background-size: cover;
     background-image: url(../assets/images/home/site/map.png);
     height: 671px;
+}
+
+
+.app {
+    margin-bottom: 124px;
+}
+
+.app .container {
+    position: relative;
+}
+
+.app__inner {
+    color: var(--text-dark);
+}
+
+.app__content {
+    display: flex;
+    flex-direction: column;
+    padding: 85px 0 85px 98px;
+    border-radius: 24px;
+    background-color: #fff;
+}
+
+.app__title {
+    max-width: 540px;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+.app__subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 40px;
+    max-width: 462px;
+}
+
+.app__links {
+    display: flex;
+    gap: 13px;
+}
+
+.app__play-market {}
+
+.app__phone {
+    position: absolute;
+    top: -137px;
+    right: 109px;
+}
+
+.text-block {
+    margin: 0 auto 34px;
+    max-width: 778px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-block-text {
+    color: #9E9E9E;
+    margin-bottom: 8px;
+}
+
+.text-block__btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    align-self: flex-end;
+    color: var(--accent);
+    font-weight: 500;
+    gap: 4px;
+    transition: all 300ms ease;
+}
+
+.text-block__btn:hover {
+    color: var(--accent-hover);
+}
+
+.text-block__btn:hover svg path {
+    fill: var(--accent-hover);
 }
