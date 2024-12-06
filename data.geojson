@@ -1,0 +1,55 @@
+{
+    "type": "FeatureCollection",
+    "metadata": {
+      "name": "delivery",
+      "creator": "Yandex Map Constructor"
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "id": 4,
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                53.917899, 27.503315
+              ],
+              [
+                53.921934, 27.509280
+              ],
+              [
+                53.920964, 27.516295
+              ],
+              [
+                53.919521, 27.523949
+              ],
+              [
+                53.916525, 27.530983
+              ],
+              [
+                53.910415, 27.530165
+              ],
+              [
+                53.904835, 27.520491
+              ],
+              [
+                53.904835, 27.520491
+              ],
+              [
+                53.911052, 27.504554
+              ]
+            ]
+          ]
+        },
+        "properties": {
+          "description": "<div style=\"margin-bottom: 10px;\"><strong>Стоимость доставки: 300 р.</strong></div>\nм. ШХ, Бейкер-стрит, дом 221-б</br>тел. +7(987)654-321</br>Часы работы: с 09:00 до 00:00</br>Служба доставки: +7(987)654-321\n",
+          "fill": "#ffd21e",
+          "fill-opacity": 0.5,
+          "stroke": "#b3b3b3",
+          "stroke-width": "0",
+          "stroke-opacity": 0
+        }
+      }
+    ]
+  }
