@@ -292,19 +292,12 @@
     background-color: var(--dividing);
 }
 
-.footer__social-link img{
-
-}
 
 .footer__social-link span{
     color: #039BE5;
     font-weight: 500;
 }
 
-.footer__descr{
-
-
-}
 
 .footer__descr-title{
     font-size: 42px;
@@ -343,8 +336,4 @@
     width: 115px;
     display: flex;
     justify-content: space-between;
-}
-
-.footer__info-img{
-    
 }
