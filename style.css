@@ -551,7 +551,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-radius: 15px;
     width: 174px;
     padding: 10px 12px;
     background-color: var(--dividing);
