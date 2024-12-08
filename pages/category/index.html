@@ -39,7 +39,8 @@
                     <nav class="header__nav">
                         <ul class="header__list">
                             <li class="header__item"><a href="../../index.html" class="header__link ">Главная</a></li>
-                            <li class="header__item"><a href="../delivery/index.html" class="header__link">Доставка</a></li>
+                            <li class="header__item"><a href="../delivery/index.html" class="header__link">Доставка</a>
+                            </li>
                             <li class="header__item"><a href="#" class="header__link">О нас</a></li>
                             <li class="header__item"><a href="../news/index.html" class="header__link">Новости</a></li>
                         </ul>
@@ -967,59 +968,8 @@
 
 
 
-    <script>
+    <script src="./index.js"></script>
 
-
-
-        const btn = document.querySelector('.food__filter-btn');
-        if (btn) {
-            btn.addEventListener('click', (event) => {
-                const ingredients = document.querySelector('.food__ingredients')
-                if (!ingredients) return
-
-                ingredients.classList.add('open');
-
-
-                gsap.to(ingredients, {
-                    duration: 0.45,
-                    opacity: 1,
-                    y: 15,
-                    ease: "power3.out"
-                });
-
-
-            })
-        }
-
-        const closeBtn = document.querySelector('.food__ingredients-btn')
-
-        if (closeBtn) {
-            closeBtn.addEventListener('click', event => {
-                const ingredients = document.querySelector('.food__ingredients')
-                if (!ingredients) return
-
-                gsap.to(ingredients, {
-                    duration: 0.45, opacity: 0, y: -20, ease: "power3.in", onComplete: () => {
-                        ingredients.classList.remove('open');
-                    }
-                });
-
-            })
-        }
-
-        const foodItems = document.querySelectorAll('.food__item');
-
-        foodItems.forEach((item, index) => {
-            gsap.from(item, {
-                duration: 1,
-                opacity: 0,
-                y: 20,
-                delay: index * 0.2,
-                ease: "power3.out",
-            })
-        })
-
-    </script>
 
 </body>
 
