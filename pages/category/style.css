@@ -1,0 +1,263 @@
+.categories-nav__item.active .categories-nav__link {
+    color: var(--orange);
+}
+
+.category__list {
+    margin-bottom: 48px;
+}
+
+.category__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category {
+    margin-bottom: 80px;
+    margin-top: 48px;
+}
+
+.food__title {
+    font-size: 56px;
+    line-height: 70px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.food__filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.food__filter-list {
+    display: flex;
+    gap: 8px;
+}
+
+.food__filter-item {
+    padding: 12px 16px;
+    border-radius: 12px;
+    background-color: #fff;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: color 300ms ease;
+}
+
+.food__filter-item:hover {
+    color: var(--orange);
+}
+
+.food__filter-item.active {
+    background-color: var(--orange);
+    color: #fff;
+    transform: background-color 300ms easy;
+}
+
+
+.food__filter-item.active:hover {
+    background-color: var(--orange-hover);
+}
+
+.food__select-box {}
+
+.food__select {
+    color: var(--text-dark);
+    border: none;
+    background-color: transparent;
+}
+
+.food__filter-food {
+    color: var(--text-dark);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.food__filter-types {
+    cursor: pointer;
+    display: flex;
+    gap: 16px;
+    height: 58px;
+}
+
+.food__filter-type {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 17px 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: color 300ms ease;
+}
+
+.food__filter-type:hover {
+    border-color: rgba(232, 104, 83, 0.5);
+}
+
+.food__filter-type.active {
+    border-color: rgba(232, 104, 83, 1);
+}
+
+.food__filter-type.active:hover {
+    border-color: rgb(164, 71, 56);
+}
+
+.food__filter-type span {
+    font-weight: 500;
+}
+
+.food__filter-type.active {
+    border-color: var(--border-active);
+}
+
+.food__filter-composition {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    position: relative;
+}
+
+.food__filter-meats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.food__filter-meat {
+    max-height: 58px;
+    padding: 17px 16px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    gap: 8px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.food__filter-meat:hover,
+.food__filter-meat:active {
+    border-color: rgba(232, 104, 83, 0.5);
+}
+
+.food__filter-meat.green {
+    background-color: transparent;
+}
+
+.food__filter-meat span {
+    font-weight: 500;
+}
+
+.food__filter-meat.active {
+    border-color: var(--orange);
+}
+
+
+.food__filter-meat.active:hover {
+    border-color: rgb(164, 71, 56);
+}
+
+.food__filter-btns {
+    display: flex;
+    align-items: stretch;
+}
+
+.food__filter-btn {}
+
+.food__filter-btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+.food__filter-btn {
+    transition: all 300ms linear;
+}
+
+.food__filter-btn:hover svg path {
+    stroke: var(--orange);
+}
+
+.food__ingredients {
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #fff;
+    flex-direction: column;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    max-width: 846px;
+    z-index: 2;
+    box-shadow: 0 6px 20px 0 rgba(29, 29, 31, .07);
+    display: none;
+    opacity: 0;
+}
+
+.food__ingredients.open {
+    display: flex;
+}
+
+.food__ingredients-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.food__ingredients-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.food__ingredients-btn {
+    color: var(--orange);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    transition: color 300ms ease;
+}
+
+.food__ingredients-btn:hover {
+    color: var(--orange-hover);
+}
+
+.food__ingredients-btn:hover .ingredients__btn-span {
+    background-color: #d3d3d3;
+}
+
+.ingredients__btn-span {
+    width: 30px;
+    height: 30px;
+    background-color: var(--dividing);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.food__ingredients-btn:hover svg {}
+
+.food__ingredients-list {
+    gap: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    z-index: 2;
+}
+
+.food__ingredients-item {
+    border: 1px solid #D2D2D7;
+    /*
+    
+    5FD63A green
+    D57E3D ugor'
+    D8CC88 tofu
+    E86853 orange
+    
+    FDA49A file chiken
+
+    */
+}
