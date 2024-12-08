@@ -53,6 +53,10 @@
     fill: var(--orange);
 }
 
+.categories-nav__item:hover .categories-nav__link {
+    color: var(--orange);
+}
+
 .disabled {}
 
 
