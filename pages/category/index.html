@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 
 <body>
@@ -289,6 +290,7 @@
                 <div class="food__select-box">
                     <select class="food__select" name="food__select" id="food__select">
                         <option value="От дорогих к дешевым">От дорогих к дешевым</option>
+                        <option value="От дорогих к дешевым">От дешевых к дорогим</option>
                     </select>
                 </div>
             </div>
@@ -325,7 +327,7 @@
                         <span>Безлактозные</span>
                     </div>
                 </div>
-                <div class="food__filter-two">
+                <div class="food__filter-composition">
                     <div class="food__filter-meats">
                         <div class="food__filter-meat active">
                             <img src="../../assets/images/category/salmon.png" width="57" height="38" alt="salmon">
@@ -362,6 +364,64 @@
                                     fill="#686870" />
                             </svg>
                         </button>
+                    </div>
+                    <div class="food__ingredients">
+                        <div class="food__ingredients-header">
+                            <h3 class="food__ingredients-title">Инградиенты</h3>
+                            <button class="food__ingredients-btn">
+                                <span>Сбросить все</span>
+                                <span class="ingredients__btn-span">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.6928 4.89148C16.0077 5.20642 16.0077 5.71703 15.6928 6.03197L6.01537 15.7094C5.70043 16.0243 5.18981 16.0243 4.87488 15.7094C4.55994 15.3945 4.55994 14.8838 4.87488 14.5689L14.5523 4.89148C14.8672 4.57654 15.3778 4.57654 15.6928 4.89148Z"
+                                            fill="#1D1D1F" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.87488 4.89148C5.18981 4.57654 5.70043 4.57654 6.01537 4.89148L15.6928 14.5689C16.0077 14.8838 16.0077 15.3945 15.6928 15.7094C15.3778 16.0243 14.8672 16.0243 14.5523 15.7094L4.87488 6.03197C4.55994 5.71703 4.55994 5.20642 4.87488 4.89148Z"
+                                            fill="#1D1D1F" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                        <ul class="food__ingredients-list">
+                            <li class="food__filter-meat food__ingredients-item active">
+                                <img src="../../assets/images/category/salmon.png" width="57" height="38" alt="salmon">
+                                <span>Лосось</span>
+                            </li>
+                            <li class="food__filter-meat food__ingredients-item active">
+                                <img src="../../assets/images/category/acne.png" width="57" height="38" alt="acne">
+                                <span>Угорь</span>
+                            </li>
+                            <li class="food__filter-meat food__ingredients-item ">
+                                <img src="../../assets/images/category/tuna.png" width="57" height="38" alt="tuna">
+                                <span>Тунец</span>
+                            </li>
+                            <li class="food__filter-meat food__ingredients-item active">
+                                <img src="../../assets/images/category/fillet.png" width="57" height="38" alt="fillet">
+                                <span>Куриное филе</span>
+                            </li>
+                            <li class="food__filter-meat food__ingredients-item active">
+                                <img src="../../assets/images/category/tofu.png" width="57" height="38" alt="fillet">
+                                <span>Тофу</span>
+                            </li>
+                            <li class="food__filter-meat food__ingredients-item ">
+                                <img src="../../assets/images/category/cheese.png" width="57" height="38" alt="fillet">
+                                <span>Авокадо</span>
+                            </li>
+                            <li class="food__filter-meat food__ingredients-item green ">
+                                <img src="../../assets/images/category/avocado.png" width="57" height="38" alt="fillet">
+                                <span>Авокадо</span>
+                            </li>
+                            <li class="food__filter-meat food__ingredients-item ">
+                                <img src="../../assets/images/category/tomato.png" width="57" height="38" alt="fillet">
+                                <span>Помидор</span>
+                            </li>
+                            <li class="food__filter-meat food__ingredients-item ">
+                                <img src="../../assets/images/category/champignons.png" width="57" height="38"
+                                    alt="fillet">
+                                <span>Гриб шитаки</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -904,6 +964,63 @@
             </div>
         </div>
     </footer>
+
+
+
+    <script>
+
+
+
+        const btn = document.querySelector('.food__filter-btn');
+        if (btn) {
+            btn.addEventListener('click', (event) => {
+                const ingredients = document.querySelector('.food__ingredients')
+                if (!ingredients) return
+
+                ingredients.classList.add('open');
+
+
+                gsap.to(ingredients, {
+                    duration: 0.45,
+                    opacity: 1,
+                    y: 15,
+                    ease: "power3.out"
+                });
+
+
+            })
+        }
+
+        const closeBtn = document.querySelector('.food__ingredients-btn')
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', event => {
+                const ingredients = document.querySelector('.food__ingredients')
+                if (!ingredients) return
+
+                gsap.to(ingredients, {
+                    duration: 0.45, opacity: 0, y: -20, ease: "power3.in", onComplete: () => {
+                        ingredients.classList.remove('open');
+                    }
+                });
+
+            })
+        }
+
+        const foodItems = document.querySelectorAll('.food__item');
+
+        foodItems.forEach((item, index) => {
+            gsap.from(item, {
+                duration: 1,
+                opacity: 0,
+                y: 20,
+                delay: index * 0.2,
+                ease: "power3.out",
+            })
+        })
+
+    </script>
+
 </body>
 
 </html>

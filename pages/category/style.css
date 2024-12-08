@@ -112,10 +112,11 @@
     border-color: var(--border-active);
 }
 
-.food__filter-two {
+.food__filter-composition {
     display: flex;
     gap: 16px;
     align-items: stretch;
+    position: relative;
 }
 
 .food__filter-meats {
@@ -141,6 +142,10 @@
     border-color: rgba(232, 104, 83, 0.5);
 }
 
+.food__filter-meat.green {
+    background-color: transparent;
+}
+
 .food__filter-meat span {
     font-weight: 500;
 }
@@ -148,6 +153,7 @@
 .food__filter-meat.active {
     border-color: var(--orange);
 }
+
 
 .food__filter-meat.active:hover {
     border-color: rgb(164, 71, 56);
@@ -171,4 +177,87 @@
 
 .food__filter-btn:hover svg path {
     stroke: var(--orange);
+}
+
+.food__ingredients {
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #fff;
+    flex-direction: column;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    max-width: 846px;
+    z-index: 2;
+    box-shadow: 0 6px 20px 0 rgba(29, 29, 31, .07);
+    display: none;
+    opacity: 0;
+}
+
+.food__ingredients.open {
+    display: flex;
+}
+
+.food__ingredients-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.food__ingredients-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.food__ingredients-btn {
+    color: var(--orange);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    transition: color 300ms ease;
+}
+
+.food__ingredients-btn:hover {
+    color: var(--orange-hover);
+}
+
+.food__ingredients-btn:hover .ingredients__btn-span {
+    background-color: #d3d3d3;
+}
+
+.ingredients__btn-span {
+    width: 30px;
+    height: 30px;
+    background-color: var(--dividing);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.food__ingredients-btn:hover svg {}
+
+.food__ingredients-list {
+    gap: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    z-index: 2;
+}
+
+.food__ingredients-item {
+    border: 1px solid #D2D2D7;
+    /*
+    
+    5FD63A green
+    D57E3D ugor'
+    D8CC88 tofu
+    E86853 orange
+    
+    FDA49A file chiken
+
+    */
 }
