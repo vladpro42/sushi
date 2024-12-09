@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.product {
+    flex-grow: 1;
+    margin-top: 32px;
+}
