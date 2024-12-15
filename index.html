@@ -84,7 +84,7 @@
                                 fill="#686870" />
                         </svg>
                     </a>
-                    <a class="header__action-btn header__cart" href="#">
+                    <button class="header__action-btn header__cart">
                         <span>Корзина</span>
                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -97,11 +97,96 @@
                                 d="M8.5 9C9.05228 9 9.5 9.44772 9.5 10C9.5 10.7956 9.81607 11.5587 10.3787 12.1213C10.9413 12.6839 11.7044 13 12.5 13C13.2956 13 14.0587 12.6839 14.6213 12.1213C15.1839 11.5587 15.5 10.7956 15.5 10C15.5 9.44772 15.9477 9 16.5 9C17.0523 9 17.5 9.44772 17.5 10C17.5 11.3261 16.9732 12.5979 16.0355 13.5355C15.0979 14.4732 13.8261 15 12.5 15C11.1739 15 9.90215 14.4732 8.96447 13.5355C8.02678 12.5979 7.5 11.3261 7.5 10C7.5 9.44772 7.94772 9 8.5 9Z"
                                 fill="#686870" />
                         </svg>
-                    </a>
+                    </button>
+                </div>
+                <div class="cart">
+                    <div class="cart__container">
+                        <div class="cart__inner">
+                            <div class="cart__header">
+                                <h2 class="title cart__title">Ваш заказ</h2>
+                                <button class="cart__close">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16.0879 4.55102C16.4239 4.88696 16.4239 5.43162 16.0879 5.76755L5.76535 16.0901C5.42942 16.4261 4.88476 16.4261 4.54883 16.0901C4.21289 15.7542 4.21289 15.2095 4.54883 14.8736L14.8714 4.55102C15.2073 4.21509 15.752 4.21509 16.0879 4.55102Z"
+                                            fill="#1D1D1F" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.54883 4.55102C4.88476 4.21509 5.42942 4.21509 5.76535 4.55102L16.0879 14.8736C16.4239 15.2095 16.4239 15.7542 16.0879 16.0901C15.752 16.4261 15.2073 16.4261 14.8714 16.0901L4.54883 5.76755C4.21289 5.43162 4.21289 4.88696 4.54883 4.55102Z"
+                                            fill="#1D1D1F" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                            <div class="cart__body">
+                                <div class="cart__list">
+                                    <div class="cart__item">
+                                        <button class="cart__delete">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13.2547 4.2431C13.5172 4.50555 13.5172 4.93106 13.2547 5.19351L5.19022 13.258C4.92777 13.5205 4.50225 13.5205 4.23981 13.258C3.97736 12.9956 3.97736 12.5701 4.23981 12.3076L12.3043 4.2431C12.5668 3.98065 12.9923 3.98065 13.2547 4.2431Z"
+                                                    fill="#1D1D1F" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M4.23981 4.2431C4.50225 3.98065 4.92777 3.98065 5.19022 4.2431L13.2547 12.3076C13.5172 12.5701 13.5172 12.9956 13.2547 13.258C12.9923 13.5205 12.5668 13.5205 12.3043 13.258L4.23981 5.19351C3.97736 4.93106 3.97736 4.50555 4.23981 4.2431Z"
+                                                    fill="#1D1D1F" />
+                                            </svg>
+
+                                        </button>
+                                        <div class="cart__item-img">
+                                            <img src="./assets/images/product/roll-1.png" alt="descriptiuon of product"
+                                                width="58" height="47">
+                                        </div>
+                                        <div class="cart__item-description">
+                                            <span class="cart__item-title">Сет #1</span>
+                                            <span class="cart__item-weigth">Вес:
+                                                40 г</span>
+                                        </div>
+
+                                        <div class="cart__item-counter">
+                                            <span class="cart__item-price">240 грн</span>
+                                            <div class="cart-counter">
+                                                <button class="cart-counter__dec cart-counter__btn">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M3 9C3 8.58579 3.33579 8.25 3.75 8.25H14.25C14.6642 8.25 15 8.58579 15 9C15 9.41421 14.6642 9.75 14.25 9.75H3.75C3.33579 9.75 3 9.41421 3 9Z"
+                                                            fill="#1D1D1F" />
+                                                    </svg>
+                                                </button>
+                                                <span class="cart-counter__count">1</span>
+                                                <button class="cart-counter__increment cart-counter__btn">
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M9 3C9.41421 3 9.75 3.33579 9.75 3.75V14.25C9.75 14.6642 9.41421 15 9 15C8.58579 15 8.25 14.6642 8.25 14.25V3.75C8.25 3.33579 8.58579 3 9 3Z"
+                                                            fill="#1D1D1F" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M3 9C3 8.58579 3.33579 8.25 3.75 8.25H14.25C14.6642 8.25 15 8.58579 15 9C15 9.41421 14.6642 9.75 14.25 9.75H3.75C3.33579 9.75 3 9.41421 3 9Z"
+                                                            fill="#1D1D1F" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__alert">
+                                <span>Минимальная сумма заказа 400 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__footer">
+                        <div class="cart__total-count">
+                            <span>Итого:</span>
+                            <span class="cart__total-price"><strong>643</strong>грн</span>
+                        </div>
+                        <a href="./pages/cart/index.html" class="btn cart-btn">Оформить заказ</a>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+    <div class="bg" id="bg"></div>
 
     <div class="categories-nav">
         <div class="categories-nav__container">
