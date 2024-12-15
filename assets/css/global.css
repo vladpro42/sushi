@@ -85,6 +85,19 @@ button {
     transition: background-color 300ms linear;
 }
 
+.btn-next {
+    background-color: #27272724;
+    width: 75px;
+    height: 162px;
+    border-radius: 12px;
+    transition: background-color 300ms ease;
+    opacity: 1;
+}
+
+.btn-next:hover {
+    background-color: #2727273f;
+}
+
 .title {
     font-size: 48px;
     font-weight: 700;
@@ -129,7 +142,7 @@ button {
 }
 
 .btn-add-favorite.active {
-   /*  background-color: var(--orange);*/
+    /*  background-color: var(--orange);*/
 }
 
 .btn-add-favorite {
@@ -141,7 +154,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transition: 300ms linear background-color;*/ 
+    /* transition: 300ms linear background-color;*/
 }
 
 .btn-add-favorite:hover,
