@@ -23,7 +23,7 @@
 
 <body>
 
-    <main class="order">
+    <main class="">
         <section class="order">
             <div class="container">
                 <h1 class="title order__title">Оформление заказа</h1>
@@ -33,12 +33,12 @@
                             <div class="order-form__personal">
                                 <span class="order-form__title">Личные данные</span>
                                 <div class="order-box">
-                                    <label for="">
-                                        <span>Имя <span class="required">*</span></span>
+                                    <label class="order-box__label" for="">
+                                        <span class="order-box__label-title">Имя <span class="required">*</span></span>
                                         <input type="text" class="order-form__input" name="name">
                                     </label>
-                                    <label for="">
-                                        <span>Имя <span class="required">*</span></span>
+                                    <label class="order-box__label" for="">
+                                        <span class="order-box__label-title">Имя <span class="required">*</span></span>
                                         <input type="tel" name="phone" class="order-form__input">
                                     </label>
                                 </div>
@@ -65,17 +65,17 @@
                                 <span class="order-form__subtitle">Зона бесплатной доставки уточняется у
                                     оператора</span>
                                 <div class="order-form__delivery-type">
-                                    <button class="order-form__delivery-btn">
+                                    <button class="order-form__delivery-btn active">
                                         Доставка
                                     </button>
-                                    <button>
+                                    <button class="order-form__delivery-btn">
                                         Самовывоз
                                     </button>
                                 </div>
                                 <p class="order-form__info">Минимальная сумма заказа 400 грн</p>
 
                                 <fieldset class="order-form__fieldset">
-                                    <div class="order-form__item-radio">
+                                    <label for="delivery-1" class="order-form__item-radio">
                                         <div class="order-form__item-left">
                                             <span class="order-form__item-svg">
                                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
@@ -104,12 +104,12 @@
                                             </div>
                                         </div>
 
-                                        <label class="radio" for="">
-                                            <input class="radio__input" type="radio" name="delivery">
+                                        <div class="radio" >
+                                            <input id="delivery-1" class="radio__input" type="radio" name="delivery">
                                             <div class="radio-circle"></div>
-                                        </label>
-                                    </div>
-                                    <div class="order-form__item-radio">
+                                        </div>
+                                    </label>
+                                    <label class="order-form__item-radio" for="delivery-2">
                                         <div class="order-form__item-left">
                                             <span class="order-form__item-svg">
                                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
@@ -138,12 +138,12 @@
                                             </div>
                                         </div>
 
-                                        <label class="radio" for="">
-                                            <input class="radio__input" type="radio" name="delivery">
+                                        <div class="radio" >
+                                            <input id="delivery-2" class="radio__input" type="radio" name="delivery">
                                             <div class="radio-circle"></div>
-                                        </label>
-                                    </div>
-                                    <div class="order-form__item-radio active">
+                                        </div>
+                                    </label>
+                                    <label class="order-form__item-radio " for="delivery-3">
                                         <div class="order-form__item-left">
                                             <span class="order-form__item-svg">
                                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
@@ -172,33 +172,32 @@
                                             </div>
                                         </div>
 
-                                        <label class="radio" for="">
-                                            <input class="radio__input" type="radio" name="delivery">
+                                        <div class="radio" >
+                                            <input id="delivery-3" class="radio__input" type="radio" name="delivery">
                                             <div class="radio-circle"></div>
-                                        </label>
-                                    </div>
+                                        </div>
+                                    </label>
                                 </fieldset>
 
                                 <div class="order-form__address-btns">
                                     <button class="order-form__address-btn">Добавить новый адрес</button>
-                                    <button class="order-form__address-btn">Удалить адрес</button>
+                                    <button class="order-form__address-btn order-form__address-btn--danger">Удалить
+                                        адрес</button>
                                 </div>
 
                                 <div class="order-form__more-options">
-                                    <label for="" class="order-form__call">
-                                        <input type="checkbox" name="call" class="order-form__checkbox">
+                                    <label for="call" class="order-form__call">
+                                        <input id="call" type="checkbox" name="call" class="order-form__checkbox">
                                         <div class="checkbox"></div>
                                         <span class="order-form__text">Не звонить в дверь</span>
                                     </label>
 
-                                    <label for="" class="order-form__call">
-                                        <input type="checkbox" name="call" class="order-form__checkbox">
+                                    <label for="door" class="order-form__call">
+                                        <input id="door" type="checkbox" name="door" class="order-form__checkbox">
                                         <div class="checkbox"></div>
                                         <span class="order-form__text">Оставить под дверью</span>
                                     </label>
                                 </div>
-
-
                             </div>
 
                             <div class="order-form__time">
@@ -208,9 +207,16 @@
                                 <div class="order-form__selects">
 
                                     <div class="order-form__select-label">
-                                        <span>День</span>
+                                        <span class="order-form__select-title">День</span>
                                         <div class="order-form__select">
-                                            <span class="order-form__current">Выберите</span>
+                                            <span class="order-form__current">Выберите
+                                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.412046 0.910826C0.737483 0.585389 1.26512 0.585389 1.59056 0.910826L6.0013 5.32157L10.412 0.910826C10.7375 0.585389 11.2651 0.585389 11.5906 0.910826C11.916 1.23626 11.916 1.7639 11.5906 2.08934L6.59056 7.08934C6.26512 7.41477 5.73748 7.41477 5.41205 7.08934L0.412046 2.08934C0.0866095 1.7639 0.0866095 1.23626 0.412046 0.910826Z"
+                                                        fill="#1D1D1F" />
+                                                </svg>
+                                            </span>
                                             <ul class="order-form__options">
                                                 <li class="order-form__option" data-value="tech">Технологии</li>
                                                 <li class="order-form__option" data-value="health">Здоровье</li>
@@ -220,9 +226,16 @@
                                     </div>
 
                                     <div class="order-form__select-label">
-                                        <span>Время</span>
+                                        <span class="order-form__select-title">Время</span>
                                         <div class="order-form__select">
-                                            <span class="order-form__current">Выберите</span>
+                                            <span class="order-form__current">Выберите
+                                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M0.412046 0.910826C0.737483 0.585389 1.26512 0.585389 1.59056 0.910826L6.0013 5.32157L10.412 0.910826C10.7375 0.585389 11.2651 0.585389 11.5906 0.910826C11.916 1.23626 11.916 1.7639 11.5906 2.08934L6.59056 7.08934C6.26512 7.41477 5.73748 7.41477 5.41205 7.08934L0.412046 2.08934C0.0866095 1.7639 0.0866095 1.23626 0.412046 0.910826Z"
+                                                        fill="#1D1D1F" />
+                                                </svg>
+                                            </span>
                                             <ul class="order-form__options">
                                                 <li class="order-form__option" data-value="tech">Технологии</li>
                                                 <li class="order-form__option" data-value="health">Здоровье</li>
@@ -230,6 +243,7 @@
                                             </ul>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -239,29 +253,34 @@
                                     наличными</span>
 
                                 <div class="order-form__pay-method">
-                                    <label class="radio" for="">
-                                        <input class="radio__input" type="radio" name="payment-method">
+                                    <label class="radio" for="payment-method-1">
+                                        <input class="radio__input" type="radio" name="payment-method"
+                                            id="payment-method-1">
                                         <div class="radio-circle"></div>
                                         <span class="radio-label">Наличными курьеру</span>
                                     </label>
-                                    <label class="radio" for="">
-                                        <input class="radio__input" type="radio" name="payment-method">
+                                    <label class="radio" for="payment-method-2">
+                                        <input class="radio__input" type="radio" name="payment-method"
+                                            id="payment-method-2">
                                         <div class="radio-circle"></div>
                                         <span class="radio-label">Оплата терминалом курьеру</span>
                                     </label>
-                                    <label class="radio" for="">
-                                        <input class="radio__input" type="radio" name="payment-method">
+                                    <label class="radio" for="payment-method-3">
+                                        <input class="radio__input" type="radio" name="payment-method"
+                                            id="payment-method-3">
                                         <div class="radio-circle"></div>
                                         <span class="radio-label">Оплата картой online</span>
                                     </label>
-                                    <label class="radio" for="">
-                                        <input class="radio__input" type="radio" name="payment-method">
+                                    <label class="radio" for="payment-method-4">
+                                        <input class="radio__input" type="radio" name="payment-method"
+                                            id="payment-method-4">
                                         <div class="radio-circle"></div>
                                         <span class="radio-label">Оплата через BitPay</span>
                                     </label>
                                 </div>
                                 <div class="order-form__pay-change">
-                                    <span class="order-form__subtitle order-form__pay-subtitle">Подготовить сдачу с</span>
+                                    <span class="order-form__subtitle order-form__pay-subtitle">Подготовить сдачу
+                                        с</span>
                                     <div class="order-form__box">
                                         <span class="order-form__cashe">500</span>
                                         <span class="order-form__currency">грн</span>
@@ -274,31 +293,31 @@
 
                                 <div class="order-form__sticks">
                                     <label for="" class="order-form__stick">
-                                        <span class="order-form__stick-label">Обычные палочки</span>
+                                        <span class="order-form__stick-title">Обычные палочки</span>
                                         <input class="order-form__stick-input" name="stick" type="text" value="4">
                                     </label>
                                     <label for="" class="order-form__stick">
-                                        <span class="order-form__stick-label">Учебные палочки</span>
+                                        <span class="order-form__stick-title">Учебные палочки</span>
                                         <input class="order-form__stick-input" name="learn-stick" type="text" value="1">
                                     </label>
                                 </div>
 
                                 <div class="order-form__comment">
                                     <label for="" class="order-form__comment-label">
-                                        <span>Примечание к заказу</span>
+                                        <span class="order-form__comment-title">Примечание к заказу</span>
                                         <textarea class="order-form__comment-textarea" name="comment"></textarea>
                                     </label>
                                 </div>
-                                
+
                                 <div class="order-form__more-options">
-                                    <label for="" class="order-form__call">
-                                        <input type="checkbox" name="cat" class="order-form__checkbox">
+                                    <label for="cat" class="order-form__call">
+                                        <input id="cat" type="checkbox" name="cat" class="order-form__checkbox">
                                         <div class="checkbox"></div>
                                         <span class="order-form__text">У меня есть кошка</span>
                                     </label>
 
-                                    <label for="" class="order-form__call">
-                                        <input type="checkbox" name="dog" class="order-form__checkbox">
+                                    <label for="dog" class="order-form__call">
+                                        <input id="dog" type="checkbox" name="dog" class="order-form__checkbox">
                                         <div class="checkbox"></div>
                                         <span class="order-form__text">У меня есть собака</span>
                                     </label>
@@ -311,15 +330,235 @@
                     <div class="order__right-col">
 
                         <div class="order__list">
+                            <div class="order__item">
+                                <button class="order__delete ">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.2547 4.2431C13.5172 4.50555 13.5172 4.93106 13.2547 5.19351L5.19022 13.258C4.92777 13.5205 4.50225 13.5205 4.23981 13.258C3.97736 12.9956 3.97736 12.5701 4.23981 12.3076L12.3043 4.2431C12.5668 3.98065 12.9923 3.98065 13.2547 4.2431Z"
+                                            fill="#1D1D1F"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.23981 4.2431C4.50225 3.98065 4.92777 3.98065 5.19022 4.2431L13.2547 12.3076C13.5172 12.5701 13.5172 12.9956 13.2547 13.258C12.9923 13.5205 12.5668 13.5205 12.3043 13.258L4.23981 5.19351C3.97736 4.93106 3.97736 4.50555 4.23981 4.2431Z"
+                                            fill="#1D1D1F"></path>
+                                    </svg>
 
+                                </button>
+                                <div class="order__item-img order__item-img">
+                                    <img src="../../assets/images/product/sets-1.png" alt="descriptiuon of product"
+                                        width="58" height="47">
+                                </div>
+                                <div class="order__item-description order__item-description">
+                                    <span class="order__item-title">Сет #1</span>
+                                    <span class="order__item-weigth">Вес:
+                                        40 г</span>
+                                </div>
+
+                                <div class="order__item-counter">
+                                    <span class="order__item-price">240 грн</span>
+                                    <div class="order-counter">
+                                        <button class="order-counter__dec order-counter__btn">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3 9C3 8.58579 3.33579 8.25 3.75 8.25H14.25C14.6642 8.25 15 8.58579 15 9C15 9.41421 14.6642 9.75 14.25 9.75H3.75C3.33579 9.75 3 9.41421 3 9Z"
+                                                    fill="#1D1D1F"></path>
+                                            </svg>
+                                        </button>
+                                        <span class="order-counter__count">1</span>
+                                        <button class="order-counter__increment order-counter__btn">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9 3C9.41421 3 9.75 3.33579 9.75 3.75V14.25C9.75 14.6642 9.41421 15 9 15C8.58579 15 8.25 14.6642 8.25 14.25V3.75C8.25 3.33579 8.58579 3 9 3Z"
+                                                    fill="#1D1D1F"></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3 9C3 8.58579 3.33579 8.25 3.75 8.25H14.25C14.6642 8.25 15 8.58579 15 9C15 9.41421 14.6642 9.75 14.25 9.75H3.75C3.33579 9.75 3 9.41421 3 9Z"
+                                                    fill="#1D1D1F"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order__item">
+                                <button class="order__delete ">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.2547 4.2431C13.5172 4.50555 13.5172 4.93106 13.2547 5.19351L5.19022 13.258C4.92777 13.5205 4.50225 13.5205 4.23981 13.258C3.97736 12.9956 3.97736 12.5701 4.23981 12.3076L12.3043 4.2431C12.5668 3.98065 12.9923 3.98065 13.2547 4.2431Z"
+                                            fill="#1D1D1F"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.23981 4.2431C4.50225 3.98065 4.92777 3.98065 5.19022 4.2431L13.2547 12.3076C13.5172 12.5701 13.5172 12.9956 13.2547 13.258C12.9923 13.5205 12.5668 13.5205 12.3043 13.258L4.23981 5.19351C3.97736 4.93106 3.97736 4.50555 4.23981 4.2431Z"
+                                            fill="#1D1D1F"></path>
+                                    </svg>
+
+                                </button>
+                                <div class="order__item-img order__item-img">
+                                    <img src="../../assets/images/product/roll-1.png" alt="descriptiuon of product"
+                                        width="58" height="47">
+                                </div>
+                                <div class="order__item-description order__item-description">
+                                    <span class="order__item-title">Суши лосось в нори</span>
+                                    <span class="order__item-weigth">Вес:
+                                        40 г</span>
+                                </div>
+
+                                <div class="order__item-counter">
+                                    <span class="order__item-price">380 грн</span>
+                                    <div class="order-counter">
+                                        <button class="order-counter__dec order-counter__btn">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3 9C3 8.58579 3.33579 8.25 3.75 8.25H14.25C14.6642 8.25 15 8.58579 15 9C15 9.41421 14.6642 9.75 14.25 9.75H3.75C3.33579 9.75 3 9.41421 3 9Z"
+                                                    fill="#1D1D1F"></path>
+                                            </svg>
+                                        </button>
+                                        <span class="order-counter__count">1</span>
+                                        <button class="order-counter__increment order-counter__btn">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9 3C9.41421 3 9.75 3.33579 9.75 3.75V14.25C9.75 14.6642 9.41421 15 9 15C8.58579 15 8.25 14.6642 8.25 14.25V3.75C8.25 3.33579 8.58579 3 9 3Z"
+                                                    fill="#1D1D1F"></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M3 9C3 8.58579 3.33579 8.25 3.75 8.25H14.25C14.6642 8.25 15 8.58579 15 9C15 9.41421 14.6642 9.75 14.25 9.75H3.75C3.33579 9.75 3 9.41421 3 9Z"
+                                                    fill="#1D1D1F"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="order__recommend_list">
+                        <div class="order-recommend__list">
+                            <h2 class="order-recommend__title">Рекомендуем добавить</h2>
+                            <div class="order-recommend__items-wrapper">
+                                <div class="order-recommend__items">
+                                    <div class="order-recommend__item">
+                                        <div class="order-recommend__item-header">
+                                            <img src="../../assets/images/product/drinks-1.png" width="147" height="119"
+                                                alt="photo of drinks">
+                                        </div>
+                                        <div class="order-recommend__item-body">
+                                            <span class="order-recommend__item-title">Coca-Cola 0.25(ст)</span>
+                                            <span class="order-recommend__item-volume">0,25 л</span>
+                                        </div>
+                                        <div class="order-recommend__item-footer">
+                                            <p class="food__item-price"><strong>190</strong> грн</p>
+                                            <button class="food__item-cart btn-add-cart">
+                                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M14.0002 4.66602C14.6445 4.66602 15.1668 5.18835 15.1668 5.83268V22.166C15.1668 22.8104 14.6445 23.3327 14.0002 23.3327C13.3558 23.3327 12.8335 22.8104 12.8335 22.166V5.83268C12.8335 5.18835 13.3558 4.66602 14.0002 4.66602Z"
+                                                        fill="#1D1D1F"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M4.6665 14.0007C4.6665 13.3563 5.18884 12.834 5.83317 12.834H22.1665C22.8108 12.834 23.3332 13.3563 23.3332 14.0007C23.3332 14.645 22.8108 15.1673 22.1665 15.1673H5.83317C5.18884 15.1673 4.6665 14.645 4.6665 14.0007Z"
+                                                        fill="#1D1D1F"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="order-recommend__item">
+                                        <div class="order-recommend__item-header">
+                                            <img src="../../assets/images/product/drinks-2.png" width="147" height="119"
+                                                alt="photo of drinks">
+                                        </div>
+                                        <div class="order-recommend__item-body">
+                                            <span class="order-recommend__item-title">Coca-Cola 0.25(ст)</span>
+                                            <span class="order-recommend__item-volume">0,25 л</span>
+                                        </div>
+                                        <div class="order-recommend__item-footer">
+                                            <p class="food__item-price"><strong>190</strong> грн</p>
+                                            <button class="food__item-cart btn-add-cart">
+                                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M14.0002 4.66602C14.6445 4.66602 15.1668 5.18835 15.1668 5.83268V22.166C15.1668 22.8104 14.6445 23.3327 14.0002 23.3327C13.3558 23.3327 12.8335 22.8104 12.8335 22.166V5.83268C12.8335 5.18835 13.3558 4.66602 14.0002 4.66602Z"
+                                                        fill="#1D1D1F"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M4.6665 14.0007C4.6665 13.3563 5.18884 12.834 5.83317 12.834H22.1665C22.8108 12.834 23.3332 13.3563 23.3332 14.0007C23.3332 14.645 22.8108 15.1673 22.1665 15.1673H5.83317C5.18884 15.1673 4.6665 14.645 4.6665 14.0007Z"
+                                                        fill="#1D1D1F"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="order-recommend__item">
+                                        <div class="order-recommend__item-header">
+                                            <img src="../../assets/images/product/drinks-3.png" width="147" height="119"
+                                                alt="photo of drinks">
+                                        </div>
+                                        <div class="order-recommend__item-body">
+                                            <span class="order-recommend__item-title">Coca-Cola 0.25(ст)</span>
+                                            <span class="order-recommend__item-volume">0,25 л</span>
+                                        </div>
+                                        <div class="order-recommend__item-footer">
+                                            <p class="food__item-price"><strong>190</strong> грн</p>
+                                            <button class="food__item-cart btn-add-cart">
+                                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M14.0002 4.66602C14.6445 4.66602 15.1668 5.18835 15.1668 5.83268V22.166C15.1668 22.8104 14.6445 23.3327 14.0002 23.3327C13.3558 23.3327 12.8335 22.8104 12.8335 22.166V5.83268C12.8335 5.18835 13.3558 4.66602 14.0002 4.66602Z"
+                                                        fill="#1D1D1F"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M4.6665 14.0007C4.6665 13.3563 5.18884 12.834 5.83317 12.834H22.1665C22.8108 12.834 23.3332 13.3563 23.3332 14.0007C23.3332 14.645 22.8108 15.1673 22.1665 15.1673H5.83317C5.18884 15.1673 4.6665 14.645 4.6665 14.0007Z"
+                                                        fill="#1D1D1F"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="order-recommend__item">
+                                        <div class="order-recommend__item-header">
+                                            <img src="../../assets/images/product/drinks-4.png" width="147" height="119"
+                                                alt="photo of drinks">
+                                        </div>
+                                        <div class="order-recommend__item-body">
+                                            <span class="order-recommend__item-title">Coca-Cola 0.25(ст)</span>
+                                            <span class="order-recommend__item-volume">0,25 л</span>
+                                        </div>
+                                        <div class="order-recommend__item-footer">
+                                            <p class="food__item-price"><strong>190</strong> грн</p>
+                                            <button class="food__item-cart btn-add-cart">
+                                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M14.0002 4.66602C14.6445 4.66602 15.1668 5.18835 15.1668 5.83268V22.166C15.1668 22.8104 14.6445 23.3327 14.0002 23.3327C13.3558 23.3327 12.8335 22.8104 12.8335 22.166V5.83268C12.8335 5.18835 13.3558 4.66602 14.0002 4.66602Z"
+                                                        fill="#1D1D1F"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M4.6665 14.0007C4.6665 13.3563 5.18884 12.834 5.83317 12.834H22.1665C22.8108 12.834 23.3332 13.3563 23.3332 14.0007C23.3332 14.645 22.8108 15.1673 22.1665 15.1673H5.83317C5.18884 15.1673 4.6665 14.645 4.6665 14.0007Z"
+                                                        fill="#1D1D1F"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-recommend__next">
+                                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.93934 0.93934C1.52513 0.353553 2.47487 0.353553 3.06066 0.93934L9.06066 6.93934C9.64645 7.52513 9.64645 8.47487 9.06066 9.06066L3.06066 15.0607C2.47487 15.6464 1.52513 15.6464 0.93934 15.0607C0.353553 14.4749 0.353553 13.5251 0.93934 12.9393L5.87868 8L0.93934 3.06066C0.353553 2.47487 0.353553 1.52513 0.93934 0.93934Z"
+                                            fill="#1D1D1F" />
+                                    </svg>
+                                </div>
+                            </div>
+
 
                         </div>
 
                         <div class="order__footer">
-                            
+                            <div class="order__footer-btns">
+                                <input class="order__footer-btn" placeholder="Введите промокод">
+                                <button class="order__footer-btn order__footer-btn--green">Применить</button>
+                            </div>
+                            <div class="order__footer-total">
+                                <div class="order__footer-wrapper">
+                                    <div class="order__total-count">
+                                        <span>Итого:</span>
+                                        <span class="order__total-price"><strong>643</strong>грн</span>
+                                    </div>
+                                    <a href="./pages/cart/index.html" class="btn order-btn">Оформить заказ</a>
+                                </div>
+                                <p class="order__min-text">Минимальная сумма заказа 400 грн</p>
+                            </div>
                         </div>
 
                     </div>

@@ -28,6 +28,7 @@ body {
 }
 
 :root {
+    --background: #F5F5F7;
     --text-dark: #1D1D1F;
     --orange: #FF6633;
     --orange-hover: #ac4725;
@@ -39,6 +40,14 @@ body {
     --accent-hover: #006617;
     --border-active: #EB5757;
     --delete-red: #F44837;
+    --border-gray: #9E9E9E;
+    --primary-border-radius: 12px;
+}
+
+.fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
