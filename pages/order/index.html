@@ -19,6 +19,7 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <title>Оформление заказа</title>
+    <script defer src="./index.js"></script>
 </head>
 
 <body>
@@ -65,16 +66,35 @@
                                 <span class="order-form__subtitle">Зона бесплатной доставки уточняется у
                                     оператора</span>
                                 <div class="order-form__delivery-type">
-                                    <button class="order-form__delivery-btn active">
+                                    <button type="button" class="order-form__delivery-btn active delivery-btn">
                                         Доставка
                                     </button>
-                                    <button class="order-form__delivery-btn">
+                                    <button type="button"class="pickup-btn order-form__delivery-btn">
                                         Самовывоз
                                     </button>
                                 </div>
+
                                 <p class="order-form__info">Минимальная сумма заказа 400 грн</p>
 
-                                <fieldset class="order-form__fieldset">
+                                <div class="pickup">
+                                    <div class="pickup__cities">
+                                        <button type="button" name="pickup_city" data-value="Киев"
+                                            class="pickup__city active">Киев</button>
+                                        <button type="button" name="pickup_city" data-value="Днепр"
+                                            class="pickup__city">Днепр</button>
+                                        <button type="button" name="pickup_city" data-value="Харьков"
+                                            class="pickup__city">Харьков</button>
+                                        <button type="button" name="pickup_city" data-value="Одесса"
+                                            class="pickup__city">Одесса</button>
+                                    </div>
+                                    <label class="pickup__label">
+                                        <span class="pickup__label-title order-form__select-title">Ресторан с которого
+                                            будете забирать <span class="required">*</span></span>
+                                        <div class="pickup__label-place">проспект Свободы </div>
+                                    </label>
+                                </div>
+
+                                <fieldset class="order-form__fieldset active">
                                     <label for="delivery-1" class="order-form__item-radio">
                                         <div class="order-form__item-left">
                                             <span class="order-form__item-svg">
@@ -104,7 +124,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="radio" >
+                                        <div class="radio">
                                             <input id="delivery-1" class="radio__input" type="radio" name="delivery">
                                             <div class="radio-circle"></div>
                                         </div>
@@ -138,7 +158,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="radio" >
+                                        <div class="radio">
                                             <input id="delivery-2" class="radio__input" type="radio" name="delivery">
                                             <div class="radio-circle"></div>
                                         </div>
@@ -172,18 +192,58 @@
                                             </div>
                                         </div>
 
-                                        <div class="radio" >
+                                        <div class="radio">
                                             <input id="delivery-3" class="radio__input" type="radio" name="delivery">
                                             <div class="radio-circle"></div>
                                         </div>
                                     </label>
                                 </fieldset>
 
-                                <div class="order-form__address-btns">
-                                    <button class="order-form__address-btn">Добавить новый адрес</button>
+                                <div class="new-address">
+                                    <label class="new-address__label" for="">
+                                        <span class="new-address__label-title order-form__stick-title">Улица, дом</span>
+                                        <input type="text" class="new-address__label-input order-form__stick-input"
+                                            name="address">
+                                    </label>
+                                    <div class="new-address__label-groups">
+                                        <label class="new-address__label-group" for="">
+                                            <span class="new-address__label-title order-form__stick-title">Дом</span>
+                                            <input type="number"
+                                                class="new-address__label-input order-form__stick-input" name="house"
+                                                placeholder="1" pattern="\d*">
+                                        </label>
+                                        <label class="new-address__label-group" for="">
+                                            <span
+                                                class="new-address__label-title order-form__stick-title">Подъезд</span>
+                                            <input type="number"
+                                                class="new-address__label-input order-form__stick-input" name="entrance"
+                                                placeholder="1" pattern="\d*">
+                                        </label>
+                                        <label class="new-address__label-group" for="">
+                                            <span class="new-address__label-title order-form__stick-title">Этаж</span>
+                                            <input type="number"
+                                                class="new-address__label-input order-form__stick-input" name="floor"
+                                                placeholder="2" pattern="\d*">
+                                        </label>
+                                        <label class="new-address__label-group" for="">
+                                            <span
+                                                class="new-address__label-title order-form__stick-title">Квартира</span>
+                                            <input type="number"
+                                                class="new-address__label-input order-form__stick-input" name="flat"
+                                                placeholder="24" pattern="\d*">
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="order-form__address-btns active">
+                                    <button type="button" id="add-new-address" class="order-form__address-btn">Добавить
+                                        новый адрес</button>
                                     <button class="order-form__address-btn order-form__address-btn--danger">Удалить
                                         адрес</button>
                                 </div>
+
+
 
                                 <div class="order-form__more-options">
                                     <label for="call" class="order-form__call">
@@ -198,7 +258,41 @@
                                         <span class="order-form__text">Оставить под дверью</span>
                                     </label>
                                 </div>
+                                <div class="new-address__btns">
+                                    <button type="button" id="add-new-address-back"
+                                        class="order-form__address-btn new-address__btn">
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.70711 0.292893C8.09763 0.683417 8.09763 1.31658 7.70711 1.70711L2.41421 7L7.70711 12.2929C8.09763 12.6834 8.09763 13.3166 7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893Z"
+                                                fill="#00CC2D" />
+                                        </svg>
+                                        <span>Назад</span>
+                                    </button>
+                                    <p class="new-address__info"><svg width="20" height="20" viewBox="0 0 20 20"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_5505_84288)">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.9987 2.49992C5.85656 2.49992 2.4987 5.85778 2.4987 9.99992C2.4987 14.1421 5.85656 17.4999 9.9987 17.4999C14.1408 17.4999 17.4987 14.1421 17.4987 9.99992C17.4987 5.85778 14.1408 2.49992 9.9987 2.49992ZM0.832031 9.99992C0.832031 4.93731 4.93609 0.833252 9.9987 0.833252C15.0613 0.833252 19.1654 4.93731 19.1654 9.99992C19.1654 15.0625 15.0613 19.1666 9.9987 19.1666C4.93609 19.1666 0.832031 15.0625 0.832031 9.99992Z"
+                                                    fill="#686870" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M10.0013 9.16675C10.4615 9.16675 10.8346 9.53984 10.8346 10.0001V13.3334C10.8346 13.7937 10.4615 14.1667 10.0013 14.1667C9.54106 14.1667 9.16797 13.7937 9.16797 13.3334V10.0001C9.16797 9.53984 9.54106 9.16675 10.0013 9.16675Z"
+                                                    fill="#686870" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.16797 6.66659C9.16797 6.20635 9.54106 5.83325 10.0013 5.83325H10.0096C10.4699 5.83325 10.843 6.20635 10.843 6.66659C10.843 7.12682 10.4699 7.49992 10.0096 7.49992H10.0013C9.54106 7.49992 9.16797 7.12682 9.16797 6.66659Z"
+                                                    fill="#686870" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_5505_84288">
+                                                    <rect width="20" height="20" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span>Адрес доставки сохранится автоматически</span>
+                                    </p>
+                                </div>
                             </div>
+
 
                             <div class="order-form__time">
                                 <span class="order-form__title">Время доставки</span>
