@@ -11,6 +11,7 @@ new Swiper(".top__swiper", {
 new Swiper(".promotion-swiper", {
   direction: "horizontal",
   loop: true,
+  spaceBetween: 30,
 
   pagination: {
     el: ".swiper-pagination",
