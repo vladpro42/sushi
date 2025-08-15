@@ -984,6 +984,9 @@ button {
     margin-bottom: 18px;
 }
 
+.product .food__list { margin-bottom: 88px;}
+.product-body { }
+
 .food__item {
     background-color: #fff;
     border-radius: 12px;
@@ -1461,8 +1464,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
-.category__btn { white-space: nowrap; width: auto;}
+.category__btn { white-space: nowrap; width: auto; padding-inline: 64px; }
 
 .category {
     margin-bottom: 80px;
@@ -1512,6 +1516,7 @@ button {
 
 .food__select-box {
     cursor: context-menu;
+    position: relative;
 }
 
 .food__select-box.active .food__select {animation: slideIn 0.35s ease forwards; }
@@ -1526,7 +1531,7 @@ button {
 }
 
 .food__select { padding: 16px; background-color: #fff; border-radius: var(--primary-border-radius); transform: translateY(-16px);
-    opacity: 0;}
+    opacity: 0; position: absolute; top: 0; left: 0; }
 
 .food__select li { padding: 4px 0; cursor: context-menu;}
 
@@ -1773,7 +1778,10 @@ button {
     position: relative;
 }
 
+.product__link { display: none;}
+
 .product__filters {
+    z-index: 2;
     display: inline-flex;
     flex-direction: column;
     align-items: start;
@@ -1814,6 +1822,7 @@ button {
 }
 
 .product__right {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     color: var(--text-dark);
