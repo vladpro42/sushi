@@ -3432,6 +3432,24 @@ input.order__footer-btn::placeholder {
     color: var(--gray);
 }
 
+.order-success__list {
+
+}
+
+.order-success__list  { margin-top: 34px; gap: 16px;}
+.order-success__list.order__list  {margin-bottom:8px;}
+.order-success__list .order__item-title { font-size: 16px;}
+.order-success__list .order__item { padding: 0px;}
+.order-success__list .order__item-img { margin-left: 0px; width: 64px; }
+.order-success__list .order__item-img img { width: 100%; max-width: 100%; height: auto; object-fit: cover; }
+.order-success__item-counter { display: flex; gap: 24px;}
+.order-success__item-counter-col { display: flex; flex-direction: column; justify-content: center; gap: 4px;}
+.order-success__item-counter-label { font-size: 12px; color: var(--border-gray);}
+.order-succes__item-counter-count { font-size: 12px; font-weight: 500; color: var(--gray);}
+.order-succes__item-counter-count b { font-size: 18px; font-weight: 700; color: var(--text-dark);}
+
+
+
 .details__top {
     display: flex;
 }
