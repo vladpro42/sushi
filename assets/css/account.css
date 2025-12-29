@@ -1,13 +1,24 @@
 
 
-.account-page {display: flex; gap: 24px; margin-top: 32px; margin-bottom: 64px;}
+.account-page {display: flex; gap: 24px;}
+main.account-page {  margin-top: 64px; margin-bottom: 64px;}
+.account-page__menu { display: flex; flex-direction: column; gap: 12px; margin-right: 150px; }
+.account-page__menu-item { display: flex; gap:12px; cursor: pointer; width: 246px; padding: 10px 12px; align-items: center; border-radius: var(--primary-border-radius)}
 
-.account-page__menu { display: flex; flex-direction: column; gap: 12px;}
-.account-page__menu-item { display: flex; gap:12px ; padding: 10px 12px; align-items: center;}
+@media (hover:hover) {
+    .account-page__menu-item:hover { background-color: var(--orange); color: var(--white) }
+    .account-page__menu-item.active:hover { background-color: var(--orange-hover); }
+}
 .account-page__menu-item-img { width: 46px; height: 46px; background-color: #fff; border-radius: var(--primary-border-radius); display: flex; justify-content: center; align-items: center;}
-.account-page__menu-item.active { color: #fff; background-color: var(--accent);}
+.account-page__menu-item.active { color: #fff; background-color: var(--orange);}
 .account-page__address { display: flex; gap: 16px; align-items: center; margin-bottom: 24px;}
 .account-page__title { font-size: 48px; font-weight: 700; color: var(--text-dark);}
 .account-page__address .btn { display: flex; align-items: center; width: auto;}
 .account-page__body { width: 100%;}
 .account-page__item { flex-grow: 1;justify-content: space-between;}
+.account-page__inner {width: 100%; display: flex; }
+.account-page__body-content { background-color: var(--white); border-radius: var(--primary-border-radius);display: flex; padding: 40px;}
+.account-page__body-content-img { margin-right: 32px;}
+.account-page__body-content-text { max-width: 460px; display: flex; flex-direction: column;}
+.account-page__body-content-name { font-size: 32px; line-height: 1.25; margin-bottom: 8px; font-weight: 500; color: var(--text-dark);}
+.account-page__body-content-description { font-size: 14px; color: var(--gray);}
