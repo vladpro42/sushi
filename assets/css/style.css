@@ -2279,17 +2279,22 @@ button {
 
 }
 
+.product-more__container {
+    position: relative;
+}
+
 .product-more .food__list {
     display: flex;
-    overflow-x: hidden;
+    gap: 0px;
 }
 
 .food__wrap {
     position: relative;
+    overflow: hidden;
 }
 
 .product-more .food__item {
-    flex: 1 0 calc((100% / var(--count)) - (var(--gap) * (var(--count) - 1) / var(--count)));
+    /* flex: 1 0 calc((100% / var(--count)) - (var(--gap) * (var(--count) - 1) / var(--count))); */
 }
 
 .product-more__wrapper {
