@@ -900,6 +900,8 @@ button {
 .categories-nav__inner {
     display: flex;
     align-items: start;
+    display: grid;
+    grid-template-columns: 340px auto;
 }
 
 .breadcrumbs {
@@ -907,6 +909,7 @@ button {
     left: 0;
     position: absolute; */
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
 }
 
@@ -1000,8 +1003,9 @@ button {
 
 .categories-nav__container {
     display: flex;
-    justify-content: center;
-    margin-inline: auto;
+    /* justify-content: center; */
+
+    margin-inline: 8% auto;
 }
 
 .categories-nav__list {
@@ -1993,8 +1997,30 @@ button {
 .product__card {
     display: flex;
     gap: 20px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-bottom: 88px;
+    position: relative;
+}
+
+.product__nav {}
+
+.product__link-prev,
+.product__link-next {
+    position: absolute;
+    top: 50%;
+    margin-top: 0px !important;
+    z-index: 10;
+}
+
+.product__link-prev {
+    left: 0;
+    transform: translate(-50%, -50%) scale(-1, 1);
+
+}
+
+.product__link-next {
+    right: 0;
+    transform: translate(50%, -50%);
 }
 
 .product__left {
@@ -2250,6 +2276,20 @@ button {
 
 .product-more {
     margin-bottom: 88px;
+
+}
+
+.product-more .food__list {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.food__wrap {
+    position: relative;
+}
+
+.product-more .food__item {
+    flex: 1 0 calc((100% / var(--count)) - (var(--gap) * (var(--count) - 1) / var(--count)));
 }
 
 .product-more__wrapper {
@@ -3672,11 +3712,11 @@ input.order__footer-btn::placeholder {
 }
 
 .details__total-price {
-    opacity: 0.7;
+    color: #606062;
 }
 
 .details__total-price strong {
-    opacity: 1;
+    color: var(--text-dark);
 }
 
 .details__top-data {}
@@ -3756,12 +3796,13 @@ input.order__footer-btn::placeholder {
 
 .details__stage:has(.details__stage-num.active) {
     background-color: #55b20b;
+    font-size: 0;
     width: 20px;
     height: 20px;
 }
 
 .details__stage-num.active {
-    /* background-image: url("../../assets/images/main/done.svg"); */
+    background-image: url("../../assets/images/main/done.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 12px;
@@ -3946,6 +3987,11 @@ input.order__footer-btn::placeholder {
     margin: 2rem 0;
 }
 
+.notfound-400 .notfound__title {
+    max-width: 393px;
+    text-align: center;
+}
+
 .notfound__inner {
     padding: 3rem 0;
     display: flex;
@@ -3976,6 +4022,10 @@ input.order__footer-btn::placeholder {
 }
 
 .notfound__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin-top: 2rem;
     padding: 1rem 0;
     background-color: var(--accent);
@@ -3983,6 +4033,54 @@ input.order__footer-btn::placeholder {
     color: #fff;
     font-weight: 500;
     width: 100%;
+    transition: 250ms;
+    gap: 1rem;
+}
+
+.notfound__btn svg {
+    fill: #fff;
+}
+
+.notfound__img {
+    position: relative;
+    width: 65%;
+}
+
+
+.notfound-400 .notfound__img {
+    width: 100%;
+}
+
+.notfound-400 .notfound__img::after {
+    content: '';
+    padding-bottom: 50%;
+    display: block;
+}
+
+.notfound__img::after {
+    content: '';
+    padding-bottom: 60%;
+    display: block;
+}
+
+.notfound__img img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+.notfound__btn:hover,
+notfound__btn:active {
+    background-color: var(--accent-hover);
+}
+
+.notfound__btn-packet {
+    width: 24px;
+    height: 24px;
 }
 
 .signin {
@@ -4243,6 +4341,53 @@ input.order__footer-btn::placeholder {
 }
 
 .footer__info-img {}
+
+
+/* 
+404
+
+.notfound {
+    margin: 2rem 0;
+}
+
+.notfound__inner {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.notfound__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.notfound__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.notfound__description {
+    margin-top: 1rem;
+    text-align: center;
+    color: #686870;
+}
+
+.notfound__btn {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background-color: var(--accent);
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+} */
 
 
 @keyframes slideIn {
