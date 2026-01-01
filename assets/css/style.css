@@ -1008,6 +1008,11 @@ button {
     margin-inline: 8% auto;
 }
 
+.categories-nav__container--index-page {
+    margin-inline: auto;
+    justify-content: center;
+}
+
 .categories-nav__list {
     padding: 6px 16px;
     background-color: #fff;
@@ -2276,7 +2281,6 @@ button {
 
 .product-more {
     margin-bottom: 88px;
-
 }
 
 .product-more__container {
@@ -4394,6 +4398,102 @@ notfound__btn:active {
     width: 100%;
 } */
 
+.popup {
+    position: fixed;
+    inset: 0;
+    z-index: 11;
+    height: 100%;
+    display: none;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 200ms;
+    /* transform: scale(0); */
+}
+
+.popup.popup--active {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* transform: scale(1); */
+}
+
+.popup .popup__inner {
+    transform: scale(0);
+    transition: 300ms;
+}
+
+
+.popup.popup--active .popup__inner {
+    transform: scale(1);
+}
+
+.popup__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 460px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.popup__inner .m-btn-site {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--dividing);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    align-self: flex-end;
+}
+
+.popup__inner .m-btn-site:hover {
+    background-color: var(--border-gray);
+}
+
+.popup__inner .m-btn-site svg {
+    width: 22px;
+    height: 22px;
+}
+
+.popup__title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.popup__subtitle {
+    color: var(--gray);
+    margin-top: .5rem
+}
+
+.popup___label {
+    margin-top: 1.5rem;
+}
+
+.popup___label input {
+    height: 46px;
+    width: 100%;
+    background-color: var(--dividing);
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+    border-radius: .5rem;
+}
+
+.popup .popup__submit {
+    background-color: var(--accent);
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    width: 100%;
+    transition: 200ms;
+}
+
+.popup .popup__submit:hover {
+    background-color: var(--accent-hover);
+}
 
 @keyframes slideIn {
     from {

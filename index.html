@@ -318,7 +318,7 @@
 
     <div class="categories-nav">
         <div class="container">
-            <div class="categories-nav__container">
+            <div class="categories-nav__container categories-nav__container--index-page">
                 <div class="categories-nav__list">
                     <a href="./pages/category/index.html" class="categories-nav__item">
                         <svg width="31" height="36" viewBox="0 0 31 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1098,6 +1098,52 @@
             </div>
         </div>
     </footer>
+    <div class="shadow-bg"></div>
+    <div class="popup">
+        <div class="popup__inner">
+            <button class="m-btn-site">
+                <svg>
+                    <use xlink:href="./assets/images/svg/sprite.svg#icon-close">
+                    </use>
+                </svg>
+            </button>
+            <span class="popup__title">Войдите в аккаунт</span>
+            <span class="popup__subtitle">Введите номер телефона</span>
+            <label class="popup___label">
+                <input name="phone" type="text" placeholder="+375">
+            </label>
+            <button class="m-btn m-btn-site popup__submit">Войти по номеру телефона</button>
+        </div>
+    </div>
+    <script>
+        const favBtn = document.querySelector('.header__favorite')
+        const btnClosePopup = document.querySelector('.popup__inner .m-btn-site')
+        const popup = document.querySelector('.popup')
+        if (favBtn) {
+            favBtn.addEventListener('click', (event) => {
+                if (popup) {
+                    popup.classList.add('popup--active')
+                }
+            })
+        }
+        function closePopup(event) {
+            if (popup) {
+                popup.classList.remove('popup--active')
+            }
+        }
+
+        if (btnClosePopup) {
+            btnClosePopup.addEventListener('click', closePopup)
+        }
+        if (popup) {
+            popup.addEventListener('click', event => {
+                console.log(event.target)
+                if (!event.target.closest('.popup__inner')) {
+                    closePopup(event)
+                }
+            })
+        }
+    </script>
 
     <script src="./assets/js/swiper.js"></script>
     <script src="./assets/js/card.js"></script>
