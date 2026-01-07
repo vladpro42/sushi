@@ -1802,10 +1802,12 @@ button {
 
 .icon-spicy {
     color: #FF6633;
+    fill: currentColor;
 }
 
 .icon-veg {
     color: #84C502;
+    fill: currentColor;
 }
 
 .food__filter-type:hover {
@@ -2760,7 +2762,7 @@ button {
 }
 
 .order-form__checkbox:checked~.checkbox::after {
-    background-image: url(/images/home/site/ok.svg);
+    background-image: url("../images/svg/ok.svg");
 }
 
 .checkbox {

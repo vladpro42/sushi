@@ -1,5 +1,5 @@
 const btnAddNewAddres = document.querySelector('#add-new-address');
-
+console.log('hello')
 if (btnAddNewAddres) {
     btnAddNewAddres.addEventListener('click', () => {
         const newAddressBlock = document.querySelector('.new-address');
@@ -20,7 +20,6 @@ if (btnAddNewAddres) {
 
     })
 }
-
 
 
 
@@ -86,3 +85,63 @@ pickupCities.forEach((item, _, arr) => {
         event.currentTarget.classList.add('active')
     }
 })
+
+const orderList = document.querySelector('.order__list');
+const orderTotalPrice = document.querySelector('.order__total-price');
+
+// Функция для пересчета общей суммы
+function updateTotalPrice() {
+    let total = 0;
+    const items = orderList.querySelectorAll('.order__item');
+
+    items.forEach(item => {
+        const priceElement = item.querySelector('.order__item-price');
+        const counterElement = item.querySelector('.order-counter__count');
+
+        if (priceElement && counterElement) {
+            const price = parseFloat(priceElement.textContent.replace(/[^\d.]/g, '')) || 0;
+            const count = parseInt(counterElement.textContent) || 0;
+            total += price * count;
+        }
+    });
+
+    if (orderTotalPrice) {
+        orderTotalPrice.textContent = `${total.toFixed(2)} ₽`; // Форматируем как вам нужно
+    }
+}
+
+if (orderList) {
+    orderList.addEventListener('click', event => {
+        const deleteButton = event.target.closest('.order__delete');
+        if (deleteButton) {
+            const orderItem = deleteButton.closest('.order__item');
+            orderItem?.remove();
+            updateTotalPrice(); // Обновляем сумму после удаления
+            return;
+        }
+
+        const orderCounterIncrement = event.target.closest('.order-counter__increment');
+        const orderCounterDec = event.target.closest('.order-counter__dec');
+
+        if (orderCounterIncrement || orderCounterDec) {
+            const counterBlock = (orderCounterIncrement || orderCounterDec).closest('.order__item-counter');
+            const counterText = counterBlock?.querySelector('.order-counter__count');
+
+            if (counterText) {
+                let value = parseInt(counterText.textContent);
+                if (!isNaN(value)) {
+                    if (orderCounterIncrement) {
+                        value += 1;
+                    } else if (orderCounterDec) {
+                        value = Math.max(1, value - 1);
+                    }
+                    counterText.textContent = value;
+                    updateTotalPrice(); // Обновляем сумму после изменения счетчика
+                }
+            }
+        }
+    });
+
+    // Инициализируем общую сумму при загрузке
+    updateTotalPrice();
+}
