@@ -47,6 +47,13 @@ body {
   --white: #fff;
 }
 
+@media (hover: none) {
+  .button:hover {
+    background-color: initial;
+    color: initial;
+  }
+}
+
 .fieldset {
   border: none;
   margin: 0;

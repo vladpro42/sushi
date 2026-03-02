@@ -280,7 +280,7 @@ button {
 }
 
 .header__nav {
-    margin-left: 48px;
+    /* margin-left: 48px; */
 }
 
 .header__list {
@@ -901,7 +901,7 @@ button {
     display: flex;
     align-items: start;
     display: grid;
-    grid-template-columns: 340px auto;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .breadcrumbs {
@@ -1004,8 +1004,6 @@ button {
 .categories-nav__container {
     display: flex;
     /* justify-content: center; */
-
-    margin-inline: 8% auto;
 }
 
 .categories-nav__container--index-page {
