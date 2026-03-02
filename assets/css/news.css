@@ -224,6 +224,28 @@
 }
 
 
+/* news-item page  */
+
+
+.news-item__inner {
+    margin-top: 1.5rem;
+}
+
+.news-item__text {
+    margin-top: 1rem;
+}
+
+.news-item__text p+p {
+    margin-top: .5rem;
+}
+
+.news-item__text p {
+    font-size: .875rem;
+    color: var(--text-dark);
+}
+
+
+
 @media (hover: none) {
 
     .news-page__body-content-link:hover {
