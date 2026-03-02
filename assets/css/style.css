@@ -1071,6 +1071,7 @@ button {
 
 .top__inner {
     display: flex;
+    justify-content: space-between;
     background: #fff;
 }
 
@@ -1749,7 +1750,8 @@ button {
     transform: translateY(-16px);
     opacity: 0;
     position: absolute;
-    top: 0;
+    top: 25px;
+    z-index: 10;
     left: 0;
 }
 

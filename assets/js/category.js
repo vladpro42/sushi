@@ -67,8 +67,23 @@ foodItems.forEach((item, index) => {
 });
 
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   document.querySelectorAll(".food__filters > .food__select-box").forEach(filterBtn => {
+//     filterBtn.addEventListener('click', event => {
+//       const target = event.currentTarget;
+//       if (target.classList.contains("active")) {
+//         target.classList.remove("active");
+//         target.classList.add("hide");
+//         return
+//       }
+//       target.classList.add("active");
+//       target.classList.remove("hide");
+//     })
+//   })
+// })
+
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll(".food__select-box").forEach(filterBtn => {
+  document.querySelectorAll(".food__filter-btns > .food__select-box").forEach(filterBtn => {
     filterBtn.addEventListener('click', event => {
       const target = event.currentTarget;
       if (target.classList.contains("active")) {
