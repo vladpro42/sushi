@@ -315,7 +315,8 @@
         grid-template-columns: 1fr;
     }
 
-    body * {
-        outline: 1px solid #000 !important;
+    .news-page__btn-more {
+        width: 100%;
+        margin: 0;
     }
 }
