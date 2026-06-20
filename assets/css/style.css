@@ -4497,6 +4497,66 @@ notfound__btn:active {
     background-color: var(--accent-hover);
 }
 
+
+
+
+
+
+
+
+
+/* ========================  PUBLIC_CONTRACT  ============================= */
+
+
+.public-contract {
+    margin-top: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 4rem;
+}
+
+.public-contract__inner h1 ~ div {
+    margin-top: 2rem;
+}
+
+.public-contract .termin h2  {
+    margin-bottom: 1.5rem;
+}
+
+.public-contract .termin p + p {
+    margin-top: 1rem;
+}
+
+.public-contract .termin ~div h2 {
+    margin-bottom: 1.5rem;
+}
+
+.public-contract  h2 {
+    font-size: 2rem; 
+    line-height: 2.5rem;
+}
+
+.public-contract .termin ~div li + li {
+    margin-top: .5rem;
+}
+
+
+
+.public-contract h1 { font-size: 48px; line-height: 72px;}
+
+.public-contract div + div { margin-top: 2rem;}
+
+.public-contract .container {
+    max-width: 720px;
+}
+
+
+
+
+
+
+
+
+
 @keyframes slideIn {
     from {
         transform: translateY(-16px);
