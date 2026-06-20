@@ -4533,6 +4533,7 @@ notfound__btn:active {
 .public-contract  h2 {
     font-size: 2rem; 
     line-height: 2.5rem;
+    font-weight: 500;
 }
 
 .public-contract .termin ~div li + li {
