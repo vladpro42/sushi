@@ -5,12 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delivery</title>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=fb3cf611-4ea5-4f56-a9a9-146082763584&lang=ru_RU"></script>
 </head>
+
+
 
 <body>
     <h1>
         Delivery
     </h1>
+
+    <div id="map" style="width: 600px; height: 400px" class="delivery__map">
+
+    </div>
+
+    <script>
+        initMap();
+
+        async function initMap() {
+            // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+            await ymaps3.ready;
+
+            const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+
+            // Иницилиазируем карту
+            const map = new YMap(
+                // Передаём ссылку на HTMLElement контейнера
+                document.getElementById('map'),
+
+                // Передаём параметры инициализации карты
+                {
+                    location: {
+                        // Координаты центра карты
+                        // 53.902284 27.561831
+                        center: [53.902284, 27.561831],
+
+                        // Уровень масштабирования
+                        zoom: 10
+                    }
+                }
+            );
+
+            // Добавляем слой для отображения схематической карты
+            map.addChild(new YMapDefaultSchemeLayer());
+        }
+
+    </script>
 </body>
 
 </html>
