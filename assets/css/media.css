@@ -469,6 +469,30 @@
     .order-succes__inner {
         flex-direction: column;
     }
+
+    .delivery__map {
+        height: auto;
+    }
+
+    .app__delivery { position: static;}
+
+    .app__content { background: transparent;}
+    .app__content { padding-inline: 0px; padding-block: 24px 0;}
+    .delivery__info-text { font-size: 16px;}
+    .delivery__info { justify-content: space-between; margin-bottom: 0;}
+    .delivery { margin-bottom: 4rem;}
+    .delivery__descr { margin-top: 0;}
+    .delivery__inner { gap: 4rem;}
+
+    .about {
+        padding: 2rem 0;
+        /* margin: 4rem; */
+    }
+
+    .about__box {
+        padding: 0px;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -635,6 +659,33 @@
     }
 
     .public-contract .termin ~div h2 { font-weight: 700;}
+
+
+    .delivery__box-item { 
+        height: auto;
+        padding-block: 18px;
+        padding-inline: 20px;
+    }
+
+    .delivery__item-subtitle {
+        margin-bottom: 20px;
+    }
+
+    .delivery__descr-box { 
+        flex-direction: column;
+    }
+
+    .delivery__box-item { flex-basis: auto;}
+
+    .delivery__item-title {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        margin-bottom: .75rem;
+    }
+
+    .delivery__inner {
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 665px) {
@@ -749,9 +800,6 @@
     .top {
         margin-bottom: 48px;
     }
-
-
-
 
     .top__swiper .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -956,8 +1004,10 @@
     }
 
     .delivery__map {
-        height: 300px;
+        /* height: 300px; */
     }
+
+    
 
     .app__title {
         font-size: 24px;
@@ -1073,6 +1123,9 @@
     .delivery__info {
         gap: 8px;
     }
+
+    .delivery {margin-bottom: 2rem; padding-top: 2rem;}
+    .app { margin-bottom: 2rem;}
 
     .text-block {
         margin-bottom: 16px;
@@ -1376,6 +1429,24 @@
 
     .filters-menu__footer {
         flex-wrap: wrap;
+    }
+
+
+    .delivery__descr {
+        margin-bottom: 3rem;
+    }
+
+
+    .about__item-title {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 0.75rem;
+    }
+
+    .about__box { gap: 1.5rem;}
+
+    .footer__center>* {
+        width: 100%;
     }
 }
 
